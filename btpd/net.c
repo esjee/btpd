@@ -702,7 +702,7 @@ net_init(void)
     char portstr[6];
     struct addrinfo hints, *res, *ai;
     bzero(&hints, sizeof(hints));
-    hints.ai_flags = AI_ADDRCONFIG | AI_PASSIVE;
+    hints.ai_flags = AI_PASSIVE;
     hints.ai_family = net_af_spec();
     hints.ai_socktype = SOCK_STREAM;
     snprintf(portstr, sizeof(portstr), "%hu", net_port);
